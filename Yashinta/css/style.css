@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717,
+            #292929,
+            #111111
+        );
+}
+
+
+/* =====================================
+   BUKU
+===================================== */
+
+.book {
+    width: 100%;
+    max-width: 390px;
+
+    padding: 16px;
+
+    background: #f2efff;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    width: 100%;
+
+    padding: 13px 10px;
+
+    background: linear-gradient(
+        135deg,
+        #1769aa,
+        #287fc4
+    );
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    color: white;
+
+    margin-bottom: 13px;
+}
+
+
+.header h1 {
+    font-size: 16px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+
+.header p {
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================
+   GAMBAR
+===================================== */
+
+.image-box {
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 6px;
+
+    background: white;
+
+    margin-bottom: 13px;
+}
+
+
+.image-box img {
+    display: block;
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    transition: opacity 0.3s ease;
+}
+
+
+/* =====================================
+   CERITA
+===================================== */
+
+.story-box {
+    width: 100%;
+
+    min-height: 100px;
+
+    padding: 8px 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+.story-box p {
+    color: #777;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================
+   TOMBOL
+===================================== */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 5px;
+}
+
+
+.btn {
+    border: none;
+
+    outline: none;
+
+    padding: 10px 11px;
+
+    min-height: 36px;
+
+    border-radius: 6px;
+
+    color: white;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.previous {
+    background: #1bb1e5;
+}
+
+
+.stop {
+    background: #f2a23a;
+}
+
+
+.next {
+    background: #1bb1e5;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+}
+
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+
+/* =====================================
+   TOMBOL DISABLED
+===================================== */
+
+.btn:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    filter: grayscale(30%);
+}
+
+
+/* =====================================
+   TITIK
+===================================== */
+
+.dots {
+    text-align: center;
+
+    color: #2388c5;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    margin-top: 13px;
+
+    height: 12px;
+}
+
+
+/* =====================================
+   RESPONSIVE HP
+===================================== */
+
+@media screen and (max-width: 400px) {
+
+    body {
+        padding: 10px;
+    }
+
+
+    .book {
+        padding: 14px;
+    }
+
+
+    .header h1 {
+        font-size: 15px;
+    }
+
+
+    .image-box img {
+        height: 200px;
+    }
+
+
+    .story-box {
+        min-height: 110px;
+    }
+
+
+    .story-box p {
+        font-size: 12px;
+    }
+
+
+    .btn {
+        padding: 9px 8px;
+
+        font-size: 9px;
+    }
+}
